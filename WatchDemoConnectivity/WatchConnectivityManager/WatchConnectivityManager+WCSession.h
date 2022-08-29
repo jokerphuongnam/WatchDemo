@@ -1,5 +1,5 @@
 //
-//  WatchConnectivityManager+WCSessionDelegate.h
+//  WatchConnectivityManager+WCSession.h
 //  WatchDemo
 //
 //  Created by pnam on 28/08/2022.

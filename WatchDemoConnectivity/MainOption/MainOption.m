@@ -7,6 +7,9 @@
 
 #import "MainOption.h"
 
-@implementation MainOption
+NSString * const _Nonnull mainOptions[] = {
+    [ShareMessage] = @"Share Message",
+     [CompressFile] = @"Compress File"
+ };
 
-@end
+const int mainCount = 2;

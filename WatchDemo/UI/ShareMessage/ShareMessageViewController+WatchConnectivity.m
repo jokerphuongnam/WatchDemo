@@ -22,14 +22,14 @@
 }
 
 - (void)watchConnectivity:(WatchConnectivityManager *)manager session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *,id> *)message {
-    NSLog(@"%@", message[WatchConnectivityManager.messageKey]);
+    [self.watchConnectivity active];
     dispatch_async(dispatch_get_main_queue(), ^{
         self.errorLabel.text = message[WatchConnectivityManager.messageKey];
     });
 }
 
 - (void)watchConnectivity:(WatchConnectivityManager *)manager session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *,id> *)message replyHandler:(void (^)(NSDictionary<NSString *,id> * _Nonnull))replyHandler {
-    NSLog(@"%@", message[WatchConnectivityManager.messageKey]);
+    [self.watchConnectivity active];
     dispatch_async(dispatch_get_main_queue(), ^{
         self.errorLabel.text = message[WatchConnectivityManager.messageKey];
     });

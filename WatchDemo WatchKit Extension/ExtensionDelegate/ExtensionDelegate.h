@@ -5,11 +5,11 @@
 //  Created by pnam on 28/08/2022.
 //
 
-#import <Foundation/Foundation.h>
+#import <WatchKit/WatchKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ExtensionDelegate : NSObject
+@interface ExtensionDelegate : NSObject <WKExtensionDelegate>
 
 @end
 

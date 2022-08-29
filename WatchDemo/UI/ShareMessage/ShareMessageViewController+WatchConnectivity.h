@@ -6,7 +6,6 @@
 //
 
 #import "ShareMessageViewController.h"
-#import "WatchConnectivityManagerDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

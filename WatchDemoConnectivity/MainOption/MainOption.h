@@ -9,8 +9,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MainOption : NSObject
+typedef NS_ENUM(NSUInteger, MainOption)  {
+    ShareMessage,
+    CompressFile
+};
 
-@end
+FOUNDATION_EXPORT NSString *const _Nonnull mainOptions[2];
+FOUNDATION_EXPORT const int mainCount;
 
 NS_ASSUME_NONNULL_END

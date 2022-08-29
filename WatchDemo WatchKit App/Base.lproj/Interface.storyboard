@@ -1,16 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="20006"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Main Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider=""/>
+                <controller id="AgC-eL-Hgc" customClass="MainInterfaceController">
+                    <items>
+                        <table alignment="left" id="Hms-Qj-kO7">
+                            <items>
+                                <tableRow identifier="MainRowController" id="ZjA-EE-k7L" customClass="MainRowController">
+                                    <group key="rootItem" width="1" alignment="left" id="dyK-mG-IDw">
+                                        <items>
+                                            <label width="1" height="1" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="r2t-c2-tZB" userLabel="Row Label"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowLabel" destination="r2t-c2-tZB" id="AZq-4C-wBB"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="Hms-Qj-kO7" id="nqg-m3-7gS"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="-384" y="335"/>
+        </scene>
+        <!--ShareMessageInterfaceController-->
+        <scene sceneID="hX2-94-g3V">
+            <objects>
+                <controller identifier="ShareMessageInterfaceController" id="ch5-Qo-zCq" customClass="ShareMessageInterfaceController">
+                    <items>
+                        <label alignment="left" text="Label" id="EnJ-mg-R7e"/>
+                        <textField width="1" alignment="left" placeholder="Input Text" id="86o-Pr-ARN">
+                            <connections>
+                                <action selector="setInputtext:" destination="ch5-Qo-zCq" id="Z5C-tg-4V0"/>
+                            </connections>
+                        </textField>
+                        <button width="1" alignment="left" title="Send Button" id="JOm-cg-bCo">
+                            <connections>
+                                <action selector="sendButtonAction" destination="ch5-Qo-zCq" id="y5J-mc-IpA"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="inputIextField" destination="86o-Pr-ARN" id="bGw-0c-LyP"/>
+                        <outlet property="messageLabel" destination="EnJ-mg-R7e" id="pb5-jO-h1c"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-70" y="335"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -32,14 +78,14 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider=""/>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider=""/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController"/>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>

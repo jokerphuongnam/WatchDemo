@@ -14,6 +14,9 @@
 
 @implementation ShareMessageViewController
 WatchConnectivityManager *watchConnectivity;
+- (WatchConnectivityManager *)watchConnectivity {
+    return watchConnectivity;
+}
 
 - (instancetype)init {
     self = [super init];
@@ -24,6 +27,7 @@ WatchConnectivityManager *watchConnectivity;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -39,5 +43,9 @@ WatchConnectivityManager *watchConnectivity;
             self.errorLabel.text = error.description;
         });
     }];
+}
+
+- (void) setupView {
+//    [self setTitle: mainOptions[0]];
 }
 @end
